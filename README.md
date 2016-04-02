@@ -3,10 +3,14 @@
 <!-- Describe your project. Why is it interesting? Why is it interesting to you personally? What do you hope to learn?  -->
 **D:** This project will involve both client and server programs, once connected, clients should be able to interact with the server and each other.  I find this interesting because I am a bit of a game historian, and old text adventures and MUDs are a staple of both gaming and computer science departments.  I hope to learn a bit more about network connections and interactions, I don't know nearly as much as I should/want to in that area.
 
+**N:**
+
 ### Analysis
 <!--Explain what approaches from class you will bring to bear on the project. Be explicit: e.g., will you use recursion? How? Will you use map/filter/reduce? How? Will you use data abstraction? Will you use object-orientation? Will you use functional approaches to processing your data? Will you use state-modification approaches? A combination?-->
 
 **D:**  Each user will be assigned a user object, which will then be stored on a hash table.  more to be added <TODO>
+
+**N:**
 
 <!--The idea here is to identify what ideas from the class you will use in carrying out your project. -->
 
@@ -22,6 +26,8 @@ If you are using some other starting materails, explain what they are. Basically
 
 **D:** There are some examples of chat servers around that I plan to take a look at and desconstruct. 
 
+**N:**
+
 ### Deliverable and Demonstration
 <!--Explain exactly what you'll have at the end. What will it be able to do at the live demo?
 
@@ -33,15 +39,24 @@ Will it be interactive? Can you show it working? This project involves a live de
 
 **D:** the server should be able to accept connections and interactions from multiple users as well as push the results of those interactions to other users.  For the live demo the plan is to have a few laptops networked together with a hub and allow drop-in/drop-out play.
 
+**N:**
+
 ### Evaluation of Results
 <!-- How will you know if you are successful? 
 If you include some kind of _quantitative analysis,_ that would be good. -->
+
+**D:**
+
+**N:**
 
 ## Architecture Diagram
 <!--Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
 
 Create several paragraphs of narrative to explain the pieces and how they interoperate.-->
 
+**D:**
+
+**N:**
 
 ## Schedule
 <!--Explain how you will go from proposal to finished product. 
@@ -54,20 +69,35 @@ You will be expected to turn in code, documentation, and data (as appropriate) a
 
 Write concrete steps for your schedule to move from concept to working system. -->
 
+**D:**
+
+**N:**
+
+
 ### First Milestone (Fri Apr 15)
 <!-- What exactly will be turned in on this day?  -->
+
+**D:**
+
+**N:**
 
 ### Second Milestone (Fri Apr 22)
 <!-- What exactly will be turned in on this day?  -->
 
+**D:**
+
+**N:**
 
 ### Final Presentation (last week of semester)
 <!-- What additionally will be done in the last chunk of time? -->
 
+**D:**
+
+**N:**
+
+
 ## Group Responsibilities
 <!-- Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable. -->
-
- Donovyn Pickler (draconicdon ) Naman Jiandani ( naman1255 )
 
 ### Donovyn Pickler @draconicdon
 Will work on the server and general back end programming.
