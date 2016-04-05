@@ -45,7 +45,7 @@ Will it be interactive? Can you show it working? This project involves a live de
 <!-- How will you know if you are successful? 
 If you include some kind of _quantitative analysis,_ that would be good. -->
 
-**D:**
+**D:**  If stable connections can be made between the server and multiple clients, and if interactions between them can be meaningful to an end user.
 
 **N:**
 
@@ -53,6 +53,8 @@ If you include some kind of _quantitative analysis,_ that would be good. -->
 <!--Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
 
 Create several paragraphs of narrative to explain the pieces and how they interoperate.-->
+
+<!--The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing-->
 
 **D:**
 
@@ -77,21 +79,21 @@ Write concrete steps for your schedule to move from concept to working system. -
 ### First Milestone (Fri Apr 15)
 <!-- What exactly will be turned in on this day?  -->
 
-**D:**
+**D:**  Server that is accepting connections between clients and also accepting and handling messages, (though maybe not yet propagating them to other users).
 
 **N:**
 
 ### Second Milestone (Fri Apr 22)
 <!-- What exactly will be turned in on this day?  -->
 
-**D:**
+**D:**  Propagation of messages across the userbase allowing for basic chat, a number of server commands, and a number of interactions with the game world.
 
 **N:**
 
 ### Final Presentation (last week of semester)
 <!-- What additionally will be done in the last chunk of time? -->
 
-**D:**
+**D:**  Error corrections, additional functionality, general polish.
 
 **N:**
 
