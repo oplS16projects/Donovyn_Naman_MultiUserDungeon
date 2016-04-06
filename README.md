@@ -4,6 +4,8 @@
 **D,N:** This project will involve both client and server programs, once connected, clients should be able to interact with the server and each other.  I find this interesting because I am a bit of a game historian, and old text adventures and MUDs are a staple of both gaming and computer science departments.  I hope to learn a bit more about network connections and interactions, I don't know nearly as much as I should/want to in that area.
 
 
+The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing
+
 ### Analysis
 <!--Explain what approaches from class you will bring to bear on the project. Be explicit: e.g., will you use recursion? How? Will you use map/filter/reduce? How? Will you use data abstraction? Will you use object-orientation? Will you use functional approaches to processing your data? Will you use state-modification approaches? A combination?-->
 
@@ -53,7 +55,7 @@ If you include some kind of _quantitative analysis,_ that would be good. -->
 
 Create several paragraphs of narrative to explain the pieces and how they interoperate.-->
 
-<!--The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing-->
+The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing
 
 ![There should be a diagram here](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/OPL%20diagram.png?raw=true "Images made in paint.net, yaaaaaaay.")
 
