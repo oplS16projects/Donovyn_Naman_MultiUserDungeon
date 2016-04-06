@@ -1,16 +1,15 @@
 # Project Title: Multi User dungeon
 ### Statement
 <!-- Describe your project. Why is it interesting? Why is it interesting to you personally? What do you hope to learn?  -->
-**D:** This project will involve both client and server programs, once connected, clients should be able to interact with the server and each other.  I find this interesting because I am a bit of a game historian, and old text adventures and MUDs are a staple of both gaming and computer science departments.  I hope to learn a bit more about network connections and interactions, I don't know nearly as much as I should/want to in that area.
+**D,N:** This project will involve both client and server programs, once connected, clients should be able to interact with the server and each other.  I find this interesting because I am a bit of a game historian, and old text adventures and MUDs are a staple of both gaming and computer science departments.  I hope to learn a bit more about network connections and interactions, I don't know nearly as much as I should/want to in that area.
 
-**N:**
 
 ### Analysis
 <!--Explain what approaches from class you will bring to bear on the project. Be explicit: e.g., will you use recursion? How? Will you use map/filter/reduce? How? Will you use data abstraction? Will you use object-orientation? Will you use functional approaches to processing your data? Will you use state-modification approaches? A combination?-->
 
 **D:**  Each user will be assigned a user object, which will then be stored on a hash table.  more to be added <TODO>
 
-**N:**
+**N:** We we wll be using the windowing component of the racket/gui toolbox for an appealing front end. There will be alot of event handling!
 
 <!--The idea here is to identify what ideas from the class you will use in carrying out your project. -->
 
@@ -24,9 +23,9 @@ Do your homework here: if you are pulling data from somewhere, actually go downl
 If you are using some other starting materails, explain what they are. Basically: anything you plan to use that isn't code.
 -->
 
-**D:** There are some examples of chat servers around that I plan to take a look at and desconstruct. 
+**D,N:** There are some examples of chat servers around that we plan to take a look at and desconstruct. 
 
-**N:**
+
 
 ### Deliverable and Demonstration
 <!--Explain exactly what you'll have at the end. What will it be able to do at the live demo?
@@ -39,15 +38,15 @@ Will it be interactive? Can you show it working? This project involves a live de
 
 **D:** the server should be able to accept connections and interactions from multiple users as well as push the results of those interactions to other users.  For the live demo the plan is to have a few laptops networked together with a hub and allow drop-in/drop-out play.
 
-**N:**
+**N:**User specific UI's that are sensitive to some aspect of the users data. These will be interactive, ofcourse. Event handling will enable us to re-create a real-life chat room functionality.
 
 ### Evaluation of Results
 <!-- How will you know if you are successful? 
 If you include some kind of _quantitative analysis,_ that would be good. -->
 
-**D:**  If stable connections can be made between the server and multiple clients, and if interactions between them can be meaningful to an end user.
+**D,N:**  If stable connections can be made between the server and multiple clients, and if interactions between them can be meaningful to an end user.
 
-**N:**
+
 
 ## Architecture Diagram
 <!--Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
@@ -76,21 +75,22 @@ Write concrete steps for your schedule to move from concept to working system. -
 
 **D:**  Server that is accepting connections between clients and also accepting and handling messages, (though maybe not yet propagating them to other users).
 
-**N:**
+**N:** All GUI libraries have been explored for contextual functionality and extensively played with, even handling functionality is mastered for adoption in the program (system dispatched internal timer events and explicitly queued events will also be looked into).
+First prototype of each UI will be in place.
 
 ### Second Milestone (Fri Apr 22)
 <!-- What exactly will be turned in on this day?  -->
 
 **D:**  Propagation of messages across the userbase allowing for basic chat, a number of server commands, and a number of interactions with the game world.
 
-**N:**
+**N:**As the build progresses, we will be adding additional features in the user interface that are reflective of the back end functionality we hope to accomplish with this chat room. Hard to speak of the additioanl features yet, but there will be many!
 
 ### Final Presentation (last week of semester)
 <!-- What additionally will be done in the last chunk of time? -->
 
 **D:**  Error corrections, additional functionality, general polish, and a complete list of server commands (Name and function).
 
-**N:**
+**N:** Polished layout and cohesive, enveloping functionality of backend and frontend.
 
 
 ## Group Responsibilities
