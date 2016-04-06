@@ -56,9 +56,7 @@ Create several paragraphs of narrative to explain the pieces and how they intero
 
 <!--The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing-->
 
-**D:**
-
-**N:**
+<insert diagram here when the pull has been made and a link exists for the picture.>
 
 ## Schedule
 <!--Explain how you will go from proposal to finished product. 
@@ -70,10 +68,6 @@ The nature of deliverables depend on your project, but may include things like p
 You will be expected to turn in code, documentation, and data (as appropriate) at each of these stages.
 
 Write concrete steps for your schedule to move from concept to working system. -->
-
-**D:**
-
-**N:**
 
 
 ### First Milestone (Fri Apr 15)
@@ -93,7 +87,7 @@ Write concrete steps for your schedule to move from concept to working system. -
 ### Final Presentation (last week of semester)
 <!-- What additionally will be done in the last chunk of time? -->
 
-**D:**  Error corrections, additional functionality, general polish.
+**D:**  Error corrections, additional functionality, general polish, and a complete list of server commands (Name and function).
 
 **N:**
 
