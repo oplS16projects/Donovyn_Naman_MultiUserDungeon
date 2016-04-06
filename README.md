@@ -56,7 +56,8 @@ Create several paragraphs of narrative to explain the pieces and how they intero
 
 <!--The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing-->
 
-<insert diagram here when the pull has been made and a link exists for the picture.>
+![There should be a diagram here](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/OPL%20diagram.png?raw=true "Images made in paint.net, yaaaaaaay.")
+
 
 ## Schedule
 <!--Explain how you will go from proposal to finished product. 
