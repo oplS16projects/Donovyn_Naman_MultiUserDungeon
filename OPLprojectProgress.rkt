@@ -24,8 +24,8 @@
 (define (displUser2 user2)
   (string-append user2 ", type here: "))
 
-
-(new button% [parent frame] [label "Register Users"]
+(define myButton
+(new button% [parent frame] [label "Register New Users"]
      [callback (lambda (button event)(
                  (set! user1 (send textfield-1 get-value))
                  (set! user2 (send textfield-2 get-value))
@@ -34,7 +34,9 @@
                  (send textfield-1 set-label (displUser1 user1))
                  (send textfield-2 set-label (displUser2 user2))
                  (send textfield-1 set-value "")
-                 (send textfield-2 set-value "")))])             
+                 (send textfield-2 set-value "")
+                 ))]))
+
                  
 
 
@@ -46,20 +48,22 @@
 
 
 ; Add a horizontal panel to the dialog, with centering for buttons
-(define panel (new horizontal-panel% [parent frame]
+(define panel1 (new horizontal-panel% [parent frame]
                                      [alignment '(center center)]))
 
 
+(define panel2 (new vertical-panel% [parent frame]
+                                     [alignment '(center center)]))
  
 ; Add Cancel and Ok buttons to the horizontal panel
-(new button% [parent panel] [label "Send!"]
+(new button% [parent panel1] [label "Send!"]
      [callback (lambda (button event)
                  (send textfield-1 set-value "")
                  (send textfield-2 set-value "")
                  (set! user1message (send textfield-1 get-value))
                  (set! user2message (send textfield-2 get-value))
                  ;;create textfield based on user 1 or user 2
-                 (new text-field% [parent panel](label user2)
+                 (new text-field% [parent panel2](label user2)
                       ;(set-value user1)
                       ))])
 
@@ -69,7 +73,7 @@
     ((eq? user2message "") (user1))
     ))
 
-(new button% [parent panel] [label "Clear"])
+(new button% [parent panel1] [label "Clear"])
 ;;add rollback functionality ----> clear all chat messages and reset frame
 
 
