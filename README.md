@@ -122,19 +122,25 @@ A downloadable version of the project is available in tar.gz format, just click 
 2) Open each of the racket files with DrRacket or your compiler of choice.
 
 3) First start by running the server software.
-    3a) A window should pop up with a large button that says "Run the server!", click that button.
-    
+
+3a) A window should pop up with a large button that says "Run the server!", click that button.
+
 4) Now run the software labeled "User 1.rkt".
+
    4a) Enter your desired username in the slim text field at the top of the window, then click "Register Users"
    
 5) Now run the software labeled "user 2.rkt".
+
    5a) Enter your desired username in the slim text field at the top of the window, then click "Register Users"
    
    *The following may be done on either or both User chat windows.*
+
 6) Additional text may be entered in the text field at the top of the window.
+
   6a) That text may be sent to all connected users by clicking the "Send!" button.
   
 7) To recieve messages from the server, click the "Fetch Message" button.
+
    7a) each time you press the "Fetch Message" button, you will recieve one message from the server. (Had issues making it recursive)
 
 8) Pressing the "Clear" button will clear the chat field, leaving it open for additional dialogue.
