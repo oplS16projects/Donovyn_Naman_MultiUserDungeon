@@ -1,3 +1,69 @@
+FP7-webpage Title of Project
+This is a template for using your repo's README.md as your project web page. I recommend you copy and paste into your README file. Delete this line and the one above it, customize everything else. Make it look good!
+
+Authors
+
+Donovyn Pickler
+
+Naman Jiandani
+
+
+Overview
+
+A brief description of the project is given here. The description is 1 to 3 sentences long. Be concise and clear.
+This project is a client-server chat application. Once connected, clients are able to interact with each other through the server. 
+
+![There should be a diagram here](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/updated%20racket%20diagram.png?raw=true "Architecture Diagram")
+
+Screenshot
+
+(insert a screenshot here. You may opt to get rid of the title for it. You need at least one screenshot. Make it actually appear here, don't just add a link.)
+
+Here's a demonstration of how to display an image that's uploaded to this repo: screenshot showing env diagram
+
+Concepts Demonstrated
+
+Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient.
+
+Data abstraction is used to provide access to the elements of the RSS feed.
+The objects in the OpenGL world are represented with recursive data structures.
+Symbolic language processing techniques are used in the parser.
+External Technology and Libraries
+
+Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).
+
+Favorite Scheme Expressions
+
+Donovyn
+
+Each team member should identify a favorite expression or procedure, written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody? Remember code looks something like this:
+
+(map (lambda (x) (foldr compose functions)) data)
+
+
+Naman
+
+This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
+
+(let* ((expr (convert-to-regexp (read-line my-in-port)))
+             (matches (flatten
+                       (hash-map *words*
+                                 (lambda (key value)
+                                   (if (regexp-match expr key) key '()))))))
+  matches)
+Additional Remarks
+
+
+Anything else you want to say in your report. Can rename or remove this section.
+
+How to Download and Run
+You may want to link to your latest release for easy downloading by people (such as Mark).
+
+Include what file to run, what to do with that file, how to interact with the app when its running, etc.
+
+
+
+
 # Project Title: Multi User dungeon
 ### Statement
 <!-- Describe your project. Why is it interesting? Why is it interesting to you personally? What do you hope to learn?  -->
@@ -57,7 +123,7 @@ Create several paragraphs of narrative to explain the pieces and how they intero
 
 The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing
 
-![There should be a diagram here](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/OPL%20diagram.png?raw=true "Images made in paint.net, yaaaaaaay.")
+![There should be a diagram here](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/updated%20racket%20diagram.png?raw=true "Images made in paint.net, yaaaaaaay.")
 
 
 ## Schedule
