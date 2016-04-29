@@ -1,13 +1,13 @@
 #lang racket/gui
 
 
-; Create a dialog
+
 (define frame (instantiate frame% ("ChatRoom")
                 [height 500]
                 [width 600]
                 ))
 
-; Add a text field to the dialog
+
 (define textfield-1 
   (new text-field% [parent frame] [label "Please Enter Your Name"]))
 
@@ -81,7 +81,7 @@
     (new text-field% [parent panel2] [label ""] [min-height 400] [min-width 300])
     )
   
-; Add Cancel and Ok buttons to the horizontal panel
+
 
 (define (make-buttons) ;makes the buttons for send, fetch, and clear.
   
@@ -116,7 +116,6 @@
        )
   
   )
-;;add rollback functionality ----> clear all chat messages and reset frame
 
 
 ; Show the dialog
