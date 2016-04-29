@@ -67,19 +67,45 @@ With a little more understanding on how to dynamically recognize when someone is
 
 ####*Naman:*
 
-This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
+These lines are decriptive of how the racket/gui library provides support for event handling and management: the callback functionality is used to correctly handle events like button clicks, entries in a field, etc. I found this to be a less cluttered and elegant format, compared to how other languages suppoer event handling in their GUI components.
+
 ```racket
-(let* ((expr (convert-to-regexp (read-line my-in-port)))
-             (matches (flatten
-                       (hash-map *words*
-                                 (lambda (key value)
-                                   (if (regexp-match expr key) key '()))))))
-  matches)
-  ```
+(define (make-buttons) ;makes the buttons for send, fetch, and clear.
   
+  (new button% [parent panel1] [label "Send!"]
+       [callback (lambda (button event)
+                   (set! user1message (send textfield-1 get-value))
+                   (send textfield-1 set-value "")
+                   (set! msg-item (list user1 user1message))
+                   (send-message msg-item);added
+                   
+                   )
+                 ]
+       )
+  
+  (new button% [parent panel1] [label "Fetch Message"] [style (list 'border)]
+       [callback (lambda (button event)
+                   ;(for (#:when (char-ready? in))
+                   (when (char-ready? in) (set! in-msg (read in)))
+                   (when (not (eqv? in-msg "")) (send received-text set-value (print-message in-msg)))
+                   (set! in-msg "")
+                   ;  )
+                   )
+                 ]
+       )
+  
+  (new button% [parent panel1] [label "Clear"]
+       [callback (lambda (button event)
+                   (set! gbl-text "")
+                   (send received-text set-value gbl-text)
+                   )
+                 ]
+       )
+  
+  )
 ##*Additional Remarks:*
 
-**D:** This is probably equivilant to a checkponint 1, not a final product.
+
 
 <!-- Anything else you want to say in your report. Can rename or remove this section.  -->
 
