@@ -1,105 +1,144 @@
-# Project Title: Multi User dungeon
-### Statement
-<!-- Describe your project. Why is it interesting? Why is it interesting to you personally? What do you hope to learn?  -->
-**D,N:** This project will involve both client and server programs, once connected, clients should be able to interact with the server and each other.  I find this interesting because I am a bit of a game historian, and old text adventures and MUDs are a staple of both gaming and computer science departments.  I hope to learn a bit more about network connections and interactions, I don't know nearly as much as I should/want to in that area.
+# *Racket Chat* 
+<!-- This is a template for using your repo's README.md as your project web page. I recommend you copy and paste into your README file. Delete this line and the one above it, customize everything else. Make it look good!
+-->
+##*Authors:*
+
+####Donovyn Pickler
+
+####Naman Jiandani
 
 
-The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing
+##*Overview:*
 
-### Analysis
-<!--Explain what approaches from class you will bring to bear on the project. Be explicit: e.g., will you use recursion? How? Will you use map/filter/reduce? How? Will you use data abstraction? Will you use object-orientation? Will you use functional approaches to processing your data? Will you use state-modification approaches? A combination?-->
+<!-- A brief description of the project is given here. The description is 1 to 3 sentences long. Be concise and clear.-->
 
-**D:**  Each user will be assigned a user object, which will then be stored on a hash table.  more to be added <TODO>
+This project is a client-server chat application. Once connected, clients are able to communicate with other users on the server.  The server acts as a relay that all messages pass through.
 
-**N:** We we wll be using the windowing component of the racket/gui toolbox for an appealing front end. There will be alot of event handling!
+![There should be a diagram here](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/updated%20racket%20diagram.png?raw=true "Architecture Diagram")
 
-<!--The idea here is to identify what ideas from the class you will use in carrying out your project. -->
 
-### Data set or other source materials
-<!--If you will be working with existing data, where will you get those data from? (Dowload it from a website? access it in a database? create it in a simulation you will build....)
+##*Screenshot:*
+![There should be a screenshot here here](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/Screenshot.png?raw=true "It actually works!")
 
-How will you convert that data into a form usable for your project?  
+##*Concepts Demonstrated:*
 
-Do your homework here: if you are pulling data from somewhere, actually go download it and look at it. Explain in some detail what your plan is for accomplishing the necessary processing.
+Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient.
 
-If you are using some other starting materails, explain what they are. Basically: anything you plan to use that isn't code.
+Data abstraction is used to in the storage of connection info.
+Recursion is used to ensure that no messages are missed by the server, and that all messages get sent to all users.
+
+<!-- examples
+Data abstraction is used to provide access to the elements of the RSS feed.
+The objects in the OpenGL world are represented with recursive data structures.
+Symbolic language processing techniques are used in the parser.
+External Technology and Libraries
+
+Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).
 -->
 
-**D,N:** There are some examples of chat servers around that we plan to take a look at and desconstruct. 
+##*Favorite Scheme Expressions:*
+
+<!-- Each team member should identify a favorite expression or procedure, written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody? Remember code looks something like this: 
+
+(map (lambda (x) (foldr compose functions)) data)
+-->
+
+####*Donovyn:*
+```racket 
+(define (get-connection port) ;;Gets the ports from a connection and shoves them into a list
+  (let-values ([(i o) (tcp-accept (tcp-listen port))])
+    (when (not (eqv? i null))
+      (add-connection i o)
+      ;(write "You have connected, waiting for another user" o) ;confirmation message
+      ;(flush-output o)
+      )
+    )
+  )
+  ```
+  
+  paird with
+  
+  ```racket
+  (define (add-connection in out) ;;Adds a pair of in and out ports to a list of pairs of in and out ports
+  (set! conn_list (cons (list in out) conn_list))
+  )
+```
+With a little more understanding on how to dynamically recognize when someone is trying to connect, these two could easily allow for connecting to and cataloging an arbitrary number of users
+
+####*Naman:*
+
+These lines are decriptive of how the racket/gui library provides support for event handling and management: the callback functionality is used to correctly handle events like button clicks, entries in a field, etc. I found this to be a less cluttered and elegant format, compared to how other languages suppoer event handling in their GUI components.
+
+```racket
+(define (make-buttons) ;makes the buttons for send, fetch, and clear.
+  
+  (new button% [parent panel1] [label "Send!"]
+       [callback (lambda (button event)
+                   (set! user1message (send textfield-1 get-value))
+                   (send textfield-1 set-value "")
+                   (set! msg-item (list user1 user1message))
+                   (send-message msg-item);added
+                   
+                   )
+                 ]
+       )
+  
+  (new button% [parent panel1] [label "Fetch Message"] [style (list 'border)]
+       [callback (lambda (button event)
+                   ;(for (#:when (char-ready? in))
+                   (when (char-ready? in) (set! in-msg (read in)))
+                   (when (not (eqv? in-msg "")) (send received-text set-value (print-message in-msg)))
+                   (set! in-msg "")
+                   ;  )
+                   )
+                 ]
+       )
+  
+  (new button% [parent panel1] [label "Clear"]
+       [callback (lambda (button event)
+                   (set! gbl-text "")
+                   (send received-text set-value gbl-text)
+                   )
+                 ]
+       )
+  
+  )
+##*Additional Remarks:*
 
 
 
-### Deliverable and Demonstration
-<!--Explain exactly what you'll have at the end. What will it be able to do at the live demo?
+<!-- Anything else you want to say in your report. Can rename or remove this section.  -->
 
-What exactly will you produce at the end of the project? A piece of software, yes, but what will it do? Here are some questions to think about (and answer depending on your application).
+##*How to Download and Run:*
 
-Will it run on some data, like batch mode? Will you present some analytical results of the processing? How can it be re-run on different source data?
+A downloadable version of the project is available in tar.gz format, just click [*HERE*](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/Racket%20Chat.tar.gz?raw=true "Click me to download the racket files in tar.gz format").
 
-Will it be interactive? Can you show it working? This project involves a live demo, so interactivity is good.-->
+###How to run:
+(Due to crappy school internet, all future tests of this must be done on the same machine)
 
-**D:** the server should be able to accept connections and interactions from multiple users as well as push the results of those interactions to other users.  For the live demo the plan is to have a few laptops networked together with a hub and allow drop-in/drop-out play.
+1) extract the contents of the tar.gz archive completely
 
-**N:**User specific UI's that are sensitive to some aspect of the users data. These will be interactive, ofcourse. Event handling will enable us to re-create a real-life chat room functionality.
+2) Open each of the racket files with DrRacket or your compiler of choice.
 
-### Evaluation of Results
-<!-- How will you know if you are successful? 
-If you include some kind of _quantitative analysis,_ that would be good. -->
+3) First start by running the server software.
+    3a) A window should pop up with a large button that says "Run the server!", click that button.
+    
+4) Now run the software labeled "User 1.rkt".
+   4a) Enter your desired username in the slim text field at the top of the window, then click "Register Users"
+   
+5) Now run the software labeled "user 2.rkt".
+   5a) Enter your desired username in the slim text field at the top of the window, then click "Register Users"
+   
+   *The following may be done on either or both User chat windows.*
+6) Additional text may be entered in the text field at the top of the window.
+  6a) That text may be sent to all connected users by clicking the "Send!" button.
+  
+7) To recieve messages from the server, click the "Fetch Message" button.
+   7a) each time you press the "Fetch Message" button, you will recieve one message from the server. (Had issues making it recursive)
 
-**D,N:**  If stable connections can be made between the server and multiple clients, and if interactions between them can be meaningful to an end user.
-
-
-
-## Architecture Diagram
-<!--Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
-
-Create several paragraphs of narrative to explain the pieces and how they interoperate.-->
-
-The slides are Here:  https://docs.google.com/presentation/d/18e4MwN-EA52GHHfoGgb2-OiBMO30s8RlIg73MlLGwFk/edit?usp=sharing
-
-![There should be a diagram here](https://github.com/oplS16projects/Donovyn_Naman_MultiUserDungeon/blob/master/OPL%20diagram.png?raw=true "Images made in paint.net, yaaaaaaay.")
-
-
-## Schedule
-<!--Explain how you will go from proposal to finished product. 
-
-There are three deliverable milestones to explicitly define, below.
-
-The nature of deliverables depend on your project, but may include things like processed data ready for import, core algorithms implemented, interface design prototyped, etc. 
-
-You will be expected to turn in code, documentation, and data (as appropriate) at each of these stages.
-
-Write concrete steps for your schedule to move from concept to working system. -->
+8) Pressing the "Clear" button will clear the chat field, leaving it open for additional dialogue.
+<!-- You may want to link to your latest release for easy downloading by people (such as Mark).
+Include what file to run, what to do with that file, how to interact with the app when its running, etc.
 
 
-### First Milestone (Fri Apr 15)
-<!-- What exactly will be turned in on this day?  -->
-
-**D:**  Server that is accepting connections between clients and also accepting and handling messages, (though maybe not yet propagating them to other users).
-
-**N:** All GUI libraries have been explored for contextual functionality and extensively played with, even handling functionality is mastered for adoption in the program (system dispatched internal timer events and explicitly queued events will also be looked into).
-First prototype of each UI will be in place.
-
-### Second Milestone (Fri Apr 22)
-<!-- What exactly will be turned in on this day?  -->
-
-**D:**  Propagation of messages across the userbase allowing for basic chat, a number of server commands, and a number of interactions with the game world.
-
-**N:**As the build progresses, we will be adding additional features in the user interface that are reflective of the back end functionality we hope to accomplish with this chat room. Hard to speak of the additioanl features yet, but there will be many!
-
-### Final Presentation (last week of semester)
-<!-- What additionally will be done in the last chunk of time? -->
-
-**D:**  Error corrections, additional functionality, general polish, and a complete list of server commands (Name and function).
-
-**N:** Polished layout and cohesive, enveloping functionality of backend and frontend.
-
-
-## Group Responsibilities
-<!-- Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable. -->
-
-### Donovyn Pickler @draconicdon
-Will work on the server and general back end programming.
-
-### Naman Jiandani @naman1255
-The Client and general front end programming.
+-->
