@@ -116,8 +116,8 @@
        )
   
   )
-;;add rollback functionality ----> clear all chat messages and reset frame
 
 
-; Show the dialog
+
+
 (send frame show #t)
